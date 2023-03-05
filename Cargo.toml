@@ -1,0 +1,40 @@
+[package]
+name = "xmllite"
+version = "0.1.0"
+edition = "2021"
+authors = ["FssAy"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+lazy_static = "1.4.0"
+
+[dependencies.tokio]
+version = "1.18.0"
+features = [
+    "full"
+]
+
+[dependencies.memexec]
+git = "https://github.com/DmitrijVC/memexec"
+version = "0.3.0"
+features = [
+    "hook"
+]
+
+[dependencies.winapi]
+version = "0.3.9"
+features = [
+    "minwindef",
+    "winnt",
+    "libloaderapi",
+    "processthreadsapi",
+    "objidlbase",
+    "unknwnbase",
+    "consoleapi",
+    "shellapi",
+    "winuser",
+    "errhandlingapi",
+    "wincred",
+]
